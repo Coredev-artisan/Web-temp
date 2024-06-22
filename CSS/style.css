@@ -195,10 +195,18 @@ a{
      font-size: 1.8rem;
      font-weight: 600;
      margin: 1rem 0;
+     outline: 0;
      padding: 2rem 3rem;
      text-align: center;
      text-transform: uppercase;
      white-space: nowrap;
+}
+
+.btn .icon{
+     width: 2rem;
+     height: 2rem;
+     margin-right: 1rem;
+     vertical-align: middle;
 }
 
 .btn--primary{
@@ -280,7 +288,7 @@ a{
 .input-group .input{
      border:0;
      flex-grow: 1;  
-     padding: 1.5rem 1rem;
+     padding: 1.5rem 2rem;
 }
 
 .input-group .btn{
@@ -310,7 +318,15 @@ a{
      background: var(--color-primary);
      color: #fff;
    }
-   
+
+   .card--primary .badge--primary {
+     background: #126de4;
+   }
+
+   .card--secondary .badge--secondary {
+     background: #02cdf1;
+   }
+
    .card--secondary .card__header {
      background: var(--color-secondary);
      color: #fff;
@@ -702,3 +718,84 @@ a{
        padding-top: 0;
      }
    }
+
+   /* Domain Block */
+
+   .block-domain .input-group{
+     box-shadow: 0 0 30px 20px #e6ebee;
+     border: 0;
+     margin: 4rem auto;
+     max-width: 670px;
+
+   }
+
+   .block-domain__prices {
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: repeat(2, 6rem);
+     font-size: 2rem;
+     font-weight: 600 ;
+     justify-items: center;
+     max-width: 700px;
+    margin: 0 auto;
+   }
+
+   @media screen and (min-width:768px) {
+     .block-domain__prices{
+          grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+     } 
+   }
+
+
+   /* Plans Block */
+
+   .block-plans .grid {
+     gap: 8rem 4rem;
+   }
+   
+   .block-plans .card {
+     max-width: 500px;
+     margin: 0 auto;
+   }
+   
+   /* Features */
+
+.feature {
+     gap: 4rem 2rem;
+     margin: 12rem 0;
+   }
+   
+   .feature:first-of-type {
+     margin-top: 6rem;
+   }
+   
+   .feature__heading {
+     margin: 1rem 0;
+   }
+
+   .feature__image {
+     width: 100%;
+   }
+   
+   @media screen and (min-width: 768px) {
+     .feature:nth-of-type(even) .feature__content {
+       order: 2;
+     }
+   }
+
+   /* Showcase Block */
+
+@media screen and (min-width: 768px) {
+     .block-showcase .grid {
+       grid-template-columns: 50% 50%;
+     }
+     .block-showcase__image {
+       justify-self: end;
+       
+     }
+     .block-showcase__image>img {
+       width: auto;
+       max-width: 700px;
+     }
+   }
+   
